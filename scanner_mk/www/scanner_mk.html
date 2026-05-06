@@ -1,0 +1,13 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<div class="container text-center py-5">
+    <h1>{{ _("Scanner MK") }}</h1>
+    <p class="lead">{{ _("Invoice Scanning & Processing Automation") }}</p>
+    <div class="mt-4">
+        <a href="/app/invoice-automation" class="btn btn-primary btn-lg">
+            {{ _("Go to Invoice Automation") }}
+        </a>
+    </div>
+</div>
+{% endblock %}

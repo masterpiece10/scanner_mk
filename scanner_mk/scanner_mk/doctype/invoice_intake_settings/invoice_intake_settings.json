@@ -1,0 +1,156 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-05-02 10:00:00.000000",
+ "default_view": null,
+ "description": "Settings for Invoice Intake processing via AI APIs",
+ "doctype": "DocType",
+ "document_type": "",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+   "field_order": [
+    "api_configuration_section",
+    "api_provider",
+    "api_key",
+    "openrouter_model",
+    "local_llm_endpoint",
+    "local_llm_model",
+    "language_section",
+    "keep_original_language",
+    "logging_section",
+    "debug_logging",
+    "defaults_section",
+    "default_supplier"
+   ],
+ "fields": [
+  {
+   "fieldname": "api_configuration_section",
+   "fieldtype": "Section Break",
+   "label": "API Configuration"
+  },
+  {
+   "fieldname": "api_provider",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "API Provider",
+   "options": "DeepSeek VL\nOpenRouter\nLocal LLM",
+   "reqd": 1
+  },
+  {
+   "fieldname": "api_key",
+   "fieldtype": "Password",
+   "in_list_view": 1,
+   "label": "API Key",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.api_provider == 'OpenRouter'",
+   "fieldname": "openrouter_model",
+   "fieldtype": "Data",
+   "label": "OpenRouter Model"
+  },
+  {
+   "depends_on": "eval:doc.api_provider == 'Local LLM'",
+   "fieldname": "local_llm_endpoint",
+   "fieldtype": "Data",
+   "label": "Local LLM Endpoint URL",
+   "description": "e.g. http://localhost:11434/v1/chat/completions for Ollama, or http://localhost:1234/v1/chat/completions for LM Studio"
+  },
+  {
+   "depends_on": "eval:doc.api_provider == 'Local LLM'",
+   "fieldname": "local_llm_model",
+   "fieldtype": "Data",
+   "label": "Local LLM Model",
+   "description": "e.g. llama3.2-vision, llava, or the model name your local server expects"
+  },
+  {
+   "fieldname": "language_section",
+   "fieldtype": "Section Break",
+   "label": "Language Settings"
+  },
+  {
+   "default": 0,
+   "fieldname": "keep_original_language",
+   "fieldtype": "Check",
+   "label": "Keep Original Language",
+   "description": "When enabled, vendor names and item descriptions will be kept in their original language (e.g. Chinese, Thai, Korean) instead of being translated to English."
+  },
+  {
+   "fieldname": "logging_section",
+   "fieldtype": "Section Break",
+   "label": "Logging"
+  },
+  {
+   "default": 0,
+   "fieldname": "debug_logging",
+   "fieldtype": "Check",
+   "label": "Enable Debug Logging",
+   "description": "When enabled, detailed processing logs will be written to the Error Log for troubleshooting."
+  },
+  {
+   "fieldname": "defaults_section",
+   "fieldtype": "Section Break",
+   "label": "Defaults"
+  },
+  {
+   "fieldname": "default_supplier",
+   "fieldtype": "Link",
+   "label": "Default Supplier",
+   "options": "Supplier"
+  }
+ ],
+ "force_re_route_to_default_view": 0,
+ "has_web_view": 0,
+ "hide_toolbar": 0,
+ "icon": null,
+ "idx": 1,
+ "image_field": null,
+ "image_view": 0,
+ "in_create": 0,
+ "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 0,
+ "is_published_field": null,
+ "is_submittable": 0,
+ "issingle": 1,
+ "istable": 0,
+ "links": [],
+ "max_attachments": 0,
+ "menu_index": 0,
+ "modified": "2025-05-02 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Scanner MK",
+ "name": "Invoice Intake Settings",
+ "name_case": null,
+ "nsm_parent_field": null,
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "queue_in_background": 0,
+ "read_only": 0,
+ "restrict_to_domain": null,
+ "route": null,
+ "search_fields": null,
+ "show_name_in_global_search": 0,
+ "show_preview_popup": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": null,
+ "track_changes": 0,
+ "track_seen": 0,
+ "track_views": 0,
+ "unique_name": "Invoice Intake Settings"
+}

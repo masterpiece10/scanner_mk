@@ -1,0 +1,205 @@
+{
+ "app": "scanner_mk",
+ "charts": [
+  {
+   "chart_name": "Invoice Processing Status",
+   "label": "Invoice Processing Status",
+   "chart_type": "Group By",
+   "based_on": "status",
+   "group_by_type": "Count",
+   "number_of_groups": 0,
+   "filters_json": "[]",
+   "timeseries": 0,
+   "time_interval": "Yearly",
+   "timespan": "Last Year",
+   "type": "Donut",
+   "color": "#28a745",
+   "is_public": 1
+  },
+  {
+   "chart_name": "Invoices Over Time",
+   "label": "Invoices Over Time",
+   "chart_type": "Count",
+   "based_on": "creation",
+   "group_by_type": "Count",
+   "number_of_groups": 0,
+   "filters_json": "[]",
+   "timeseries": 1,
+   "time_interval": "Monthly",
+   "timespan": "Last Year",
+   "type": "Line",
+   "color": "#17a2b8",
+   "is_public": 1
+  }
+ ],
+ "content": "[{\"id\":\"shortcut-1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Invoice Intake Log\",\"col\":3}},{\"id\":\"shortcut-2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Invoice Intake Settings\",\"col\":3}},{\"id\":\"spacer-1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"chart-1\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Invoice Processing Status\",\"col\":6}},{\"id\":\"chart-2\",\"type\":\"chart\",\"data\":{\"chart_name\":\"Invoices Over Time\",\"col\":6}},{\"id\":\"card-1\",\"type\":\"card\",\"data\":{\"card_name\":\"Invoice Intake\",\"col\":4}},{\"id\":\"card-2\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"card-3\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}}]",
+ "creation": "2025-05-02 18:00:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "file-invoice",
+ "idx": 1,
+ "is_hidden": 0,
+ "label": "Invoice Automation",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Invoice Intake",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Invoice Intake Log",
+   "link_count": 0,
+   "link_to": "Invoice Intake Log",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Purchase Invoice",
+   "link_count": 0,
+   "link_to": "Purchase Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Settings",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Invoice Intake Settings",
+   "link_count": 0,
+   "link_to": "Invoice Intake Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Supplier",
+   "link_count": 0,
+   "link_to": "Supplier",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Item",
+   "link_count": 0,
+   "link_to": "Item",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2025-05-02 18:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Scanner MK",
+ "name": "Invoice Automation",
+ "number_cards": [
+  {
+   "label": "Total Invoices Processed",
+   "function": "Count",
+   "aggregate_function_based_on": "",
+   "document_type": "Invoice Intake Log",
+   "filters_json": "[[\"Invoice Intake Log\",\"status\",\"=\",\"Processed\"]]",
+   "show_percentage_stats": 1,
+   "stats_time_interval": "Daily",
+   "type": "Document Type"
+  },
+  {
+   "label": "Pending / Manual Review",
+   "function": "Count",
+   "aggregate_function_based_on": "",
+   "document_type": "Invoice Intake Log",
+   "filters_json": "[[\"Invoice Intake Log\",\"status\",\"in\",[\"Pending\",\"Manual Review Needed\"]]]",
+   "show_percentage_stats": 1,
+   "stats_time_interval": "Daily",
+   "type": "Document Type"
+  },
+  {
+   "label": "Errors",
+   "function": "Count",
+   "aggregate_function_based_on": "",
+   "document_type": "Invoice Intake Log",
+   "filters_json": "[[\"Invoice Intake Log\",\"status\",\"=\",\"Error\"]]",
+   "show_percentage_stats": 1,
+   "stats_time_interval": "Daily",
+   "type": "Document Type"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [
+  {
+   "document_type": "Invoice Intake Log",
+   "label": "Recent Invoice Intake Logs",
+   "filters": "[]",
+   "columns": "name, invoice_attachment, status, purchase_invoice, modified"
+  }
+ ],
+ "restrict_to_domain": "",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Accounts Manager"
+  },
+  {
+   "role": "Accounts User"
+  }
+ ],
+ "sequence_id": 10.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "New",
+   "label": "New Invoice Intake Log",
+   "link_to": "Invoice Intake Log",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Invoice Intake Settings",
+   "link_to": "Invoice Intake Settings",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "Invoice Automation",
+ "type": "Workspace"
+}
