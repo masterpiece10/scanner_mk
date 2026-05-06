@@ -117,26 +117,23 @@ def process_intake_log(doc_name):
 		pi_name = processor.create_purchase_invoice(doc_name)
 
 		if pi_name:
-			frappe.log_error(
+			frappe.logger(__name__).info(
 				_("Successfully processed intake log {0} -> Purchase Invoice {1}").format(
 					doc_name, pi_name
-				),
-				"Invoice Intake Pipeline",
+				)
 			)
 		else:
-			frappe.log_error(
+			frappe.logger(__name__).warning(
 				_("Processing completed but Purchase Invoice creation returned None for {0}").format(
 					doc_name
-				),
-				"Invoice Intake Pipeline",
+				)
 			)
 
 	except Exception as e:
-		frappe.log_error(
+		frappe.logger(__name__).error(
 			_("Error in process_intake_log for {0}: {1}\n{2}").format(
 				doc_name, str(e), frappe.get_traceback()
-			),
-			"Invoice Intake Pipeline",
+			)
 		)
 		try:
 			# Reload the document to avoid TimestampMismatchError

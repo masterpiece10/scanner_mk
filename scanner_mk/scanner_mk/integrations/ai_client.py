@@ -44,7 +44,7 @@ class AIClient:
 			method: The method name for the Error Log.
 		"""
 		if self._is_debug_logging_enabled():
-			frappe.log_error(message, method)
+			frappe.logger(__name__).debug(message)
 
 	def _log_error_always(self, message, method="Invoice Intake AI Client"):
 		"""Log an error message to the Error Log ALWAYS (regardless of debug setting).
@@ -374,7 +374,7 @@ class AIClient:
 			error_msg = _("DeepSeek API error (HTTP {0}): {1}").format(
 				response.status_code, response.text[:500]
 			)
-			frappe.log_error(error_msg, "Invoice Intake AI Client")
+			frappe.logger(__name__).error(error_msg)
 			frappe.throw(error_msg)
 
 		self._log_debug(
@@ -428,7 +428,7 @@ class AIClient:
 			error_msg = _("OpenRouter API error (HTTP {0}): {1}").format(
 				response.status_code, response.text[:500]
 			)
-			frappe.log_error(error_msg, "Invoice Intake AI Client")
+			frappe.logger(__name__).error(error_msg)
 			frappe.throw(error_msg)
 
 		self._log_debug(
@@ -487,7 +487,7 @@ class AIClient:
 			error_msg = _("Local LLM API error (HTTP {0}): {1}").format(
 				response.status_code, response.text[:500]
 			)
-			frappe.log_error(error_msg, "Invoice Intake AI Client")
+			frappe.logger(__name__).error(error_msg)
 			frappe.throw(error_msg)
 
 		self._log_debug(

@@ -3,7 +3,7 @@
 from setuptools import setup, find_packages
 
 setup(
-	name="scanner_mk",
+	name="erpnext_scanner_mk",
 	version="1.0.0",
 	description="ERPNext Scanner MK - Automatic invoice recognition and processing",
 	author="Tik13 GmbH",

@@ -2,11 +2,11 @@
 
 Run this from the bench console:
     bench --site test.tik13.org console
-    exec(open('apps/erpnext_scanner_mk/erpnext_scanner_mk/erpnext_scanner_mk/utils/test_pipeline.py').read())
+    exec(open('apps/erpnext_scanner_mk/scanner_mk/utils/test_pipeline.py').read())
 
 Or run individual tests:
     bench --site test.tik13.org console
-    from erpnext_scanner_mk.erpnext_scanner_mk.erpnext_scanner_mk.utils.test_pipeline import *
+    from erpnext_scanner_mk.utils.test_pipeline import *
     test_ocr_engine()
     test_ai_client()
     test_full_pipeline()
