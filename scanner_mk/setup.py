@@ -8,7 +8,7 @@ setup(
 	description="ERPNext Scanner MK - Automatic invoice recognition and processing",
 	author="Tik13 GmbH",
 	author_email="mike@tik13.org",
-	packages=["scanner_mk"],
+	packages=["erpnext_scanner_mk"],
 	package_dir={"": "."},
 	zip_safe=False,
 	include_package_data=True,
