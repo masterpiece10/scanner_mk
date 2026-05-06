@@ -3,7 +3,7 @@ requires = ["setuptools>=45", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "erpnext_scanner_mk"
+name = "scanner_mk"
 version = "1.0.0"
 description = "ERPNext Scanner MK - Automatic invoice recognition and processing"
 authors = [
@@ -21,5 +21,5 @@ dependencies = [
 ]
 
 [tool.setuptools]
-packages = ["erpnext_scanner_mk", "erpnext_scanner_mk.*"]
+packages = ["scanner_mk", "scanner_mk.*"]
 include-package-data = true
