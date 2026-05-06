@@ -8,7 +8,7 @@ setup(
 	description="ERPNext Scanner MK - Automatic invoice recognition and processing",
 	author="Tik13 GmbH",
 	author_email="mike@tik13.org",
-	packages=find_packages(),
+	packages=find_packages(where='.', include=['scanner_mk', 'scanner_mk.*']),
 	zip_safe=False,
 	include_package_data=True,
 	install_requires=[
