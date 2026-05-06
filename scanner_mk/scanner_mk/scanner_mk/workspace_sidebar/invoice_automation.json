@@ -1,0 +1,50 @@
+{
+ "app": "erpnext_scanner_mk",
+ "creation": "2026-05-03 15:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Workspace Sidebar",
+ "header_icon": "file-invoice",
+ "idx": 0,
+ "items": [
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "file-invoice",
+   "indent": 1,
+   "keep_closed": 0,
+   "label": "Invoice Automation",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Section Break"
+  },
+  {
+   "child": 1,
+   "collapsible": 1,
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Invoice Intake Log",
+   "link_to": "Invoice Intake Log",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 1,
+   "collapsible": 1,
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Invoice Intake Settings",
+   "link_to": "Invoice Intake Settings",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-05-03 15:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Scanner MK",
+ "name": "Invoice Automation",
+ "owner": "Administrator",
+ "standard": 1,
+ "title": "Invoice Automation"
+}
