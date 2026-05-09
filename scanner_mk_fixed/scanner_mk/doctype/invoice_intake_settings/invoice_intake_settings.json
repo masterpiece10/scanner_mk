@@ -1,0 +1,118 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2026-05-03 15:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "api_provider",
+  "api_key",
+  "openrouter_model",
+  "local_llm_endpoint",
+  "local_llm_model",
+  "keep_original_language",
+  "debug_logging",
+  "default_supplier",
+  "section_break_1",
+  "ocr_language",
+  "ocr_confidence_threshold"
+ ],
+ "fields": [
+  {
+   "default": "DeepSeek VL",
+   "fieldname": "api_provider",
+   "fieldtype": "Select",
+   "label": "API Provider",
+   "options": "DeepSeek VL\nOpenRouter\nLocal LLM"
+  },
+  {
+   "fieldname": "api_key",
+   "fieldtype": "Password",
+   "label": "API Key"
+  },
+  {
+   "default": "meta-llama/llama-3.2-90b-vision-instruct",
+   "fieldname": "openrouter_model",
+   "fieldtype": "Data",
+   "label": "OpenRouter Model"
+  },
+  {
+   "default": "http://localhost:11434",
+   "fieldname": "local_llm_endpoint",
+   "fieldtype": "Data",
+   "label": "Local LLM Endpoint"
+  },
+  {
+   "default": "llama3.2-vision",
+   "fieldname": "local_llm_model",
+   "fieldtype": "Data",
+   "label": "Local LLM Model"
+  },
+  {
+   "default": "0",
+   "fieldname": "keep_original_language",
+   "fieldtype": "Check",
+   "label": "Keep Original Language"
+  },
+  {
+   "default": "0",
+   "fieldname": "debug_logging",
+   "fieldtype": "Check",
+   "label": "Enable Debug Logging"
+  },
+  {
+   "fieldname": "default_supplier",
+   "fieldtype": "Link",
+   "label": "Default Supplier",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "eng",
+   "fieldname": "ocr_language",
+   "fieldtype": "Data",
+   "label": "OCR Language"
+  },
+  {
+   "default": "60",
+   "fieldname": "ocr_confidence_threshold",
+   "fieldtype": "Int",
+   "label": "OCR Confidence Threshold"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-03 15:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Scanner MK",
+ "name": "Invoice Intake Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
