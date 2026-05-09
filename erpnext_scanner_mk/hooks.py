@@ -1,4 +1,4 @@
-app_name = "erpnext_scanner_mk"
+app_name = "erpmext_scanner_mk"
 app_title = "ERPNext Scanner MK"
 app_publisher = "Tik13 GmbH"
 app_description = "something"
@@ -24,15 +24,15 @@ add_to_apps_screen = [
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/erpnext_scanner_mk/css/scanner_mk.css"
-# app_include_js = "/assets/erpnext_scanner_mk/js/scanner_mk.js"
+# app_include_css = "/assets/scanner_mk/css/scanner_mk.css"
+# app_include_js = "/assets/scanner_mk/js/scanner_mk.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/erpnext_scanner_mk/css/scanner_mk.css"
-# web_include_js = "/assets/erpnext_scanner_mk/js/scanner_mk.js"
+# web_include_css = "/assets/scanner_mk/css/scanner_mk.css"
+# web_include_js = "/assets/scanner_mk/js/scanner_mk.js"
 
 # include custom scss in every website theme (without file extension ".scss")
-# website_theme_scss = "erpnext_scanner_mk/public/scss/website"
+# website_theme_scss = "scanner_mk/public/scss/website"
 
 # include js, css files in header of web form
 # webform_include_js = {"doctype": "public/js/doctype.js"}
