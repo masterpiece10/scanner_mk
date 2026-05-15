@@ -5,7 +5,7 @@
  "doctype": "Desktop Icon",
  "hidden": 0,
  "icon": "/assets/erpnext_scanner_mk/images/scanner-mk-icon.svg",
- "icon_type": "Link",
+	"icon_type": "URL",
  "idx": 1,
  "label": "Invoice Automation",
  "link_to": "invoice-automation",
