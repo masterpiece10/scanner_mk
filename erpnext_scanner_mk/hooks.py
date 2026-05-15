@@ -14,7 +14,7 @@ app_license = "mit"
 add_to_apps_screen = [
 	{
 		"name": "erpnext_scanner_mk",
-		"logo": "/assets/erpnext_scanner_mk/images/scanner-mk-icon.svg",
+		"logo": "/public/images/scanner-mk-icon.svg",
 		"title": "ERPNext Scanner MK",
 		"route": "/app/invoice-automation"
 	}

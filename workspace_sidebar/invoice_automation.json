@@ -42,7 +42,7 @@
  ],
  "modified": "2026-05-03 15:00:00.000000",
  "modified_by": "Administrator",
- "module": "Scanner MK",
+ "module": "erpnext_scanner_mk",
  "name": "Invoice Automation",
  "owner": "Administrator",
  "standard": 1,
