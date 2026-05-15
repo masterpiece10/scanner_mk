@@ -240,7 +240,7 @@ class AIClient:
 		"""Extract invoice data using OCR + AI text processing."""
 		try:
 			# Step 1: Run local OCR
-			from erpnext_scanner_mk.utils.ocr import OCREngine
+			from erpnext_scanner_mk.erpnext_scanner_mk.erpnext_scanner_mk.utils.ocr import OCREngine
 
 			ocr = OCREngine()
 			ocr_text = ocr.extract_text(file_url)

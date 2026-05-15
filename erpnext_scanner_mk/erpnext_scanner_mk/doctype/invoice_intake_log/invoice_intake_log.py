@@ -25,7 +25,7 @@ class InvoiceIntakeLog(Document):
 	def _enqueue_processing(self):
 		"""Enqueue the background job for invoice processing."""
 		frappe.enqueue(
-			"scanner_mk.doctype.invoice_intake_log.invoice_intake_log.process_intake_log",
+			"erpnext_scanner_mk.erpnext_scanner_mk.erpnext_scanner_mk.doctype.invoice_intake_log.invoice_intake_log.process_intake_log",
 			doc_name=self.name,
 			queue="long",
 			timeout=600,
@@ -78,7 +78,7 @@ def process_intake_log(doc_name):
 		frappe.db.commit()
 
 		# Step 1: Run AI extraction
-		from scanner_mk.integrations.ai_client import AIClient
+		from erpnext_scanner_mk.erpnext_scanner_mk.erpnext_scanner_mk.integrations.ai_client import AIClient
 
 		client = AIClient()
 		extracted_data = client.extract_invoice_data(
@@ -98,7 +98,7 @@ def process_intake_log(doc_name):
 		frappe.db.commit()
 
 		# Step 3: Create Purchase Invoice via processor
-		from scanner_mk.utils.processor import InvoiceDataProcessor
+		from erpnext_scanner_mk.erpnext_scanner_mk.erpnext_scanner_mk.utils.processor import InvoiceDataProcessor
 
 		processor = InvoiceDataProcessor(intake_log_name=doc_name)
 		pi_name = processor.create_purchase_invoice(doc_name)
